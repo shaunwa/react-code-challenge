@@ -28,9 +28,6 @@ a number of them. Try to do that by modifying Planets component in App component
 only prepare Planets component to be more customizable, in case we would like to
 use origin Planet components in other places
 
-## Mockups:
-- no mockups but would be great if you make that app pretty :)
-
 ## Tech stack:
 - react (CRA starter)
 - react-router
@@ -47,8 +44,8 @@ use origin Planet components in other places
 ## Paying attention to:
 - How you split code for components
 - Reusability of the components
-- Code repetitions and reusability
+- Code repetition and reusability
 - Working in accordance with good practices in general
 
 ## Delivery
-Delivery the application by link to public repo or zip file
+Open a PR and send us a message with your Github username and will review! We look forward to your submission :)
