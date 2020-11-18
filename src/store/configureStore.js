@@ -15,6 +15,6 @@ function configureStore(initialState) {
 
   return store;
 }
-const store = configureStore({test: 'testing'});
+const store = configureStore({});
 
 export default store;

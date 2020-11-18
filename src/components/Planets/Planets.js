@@ -30,11 +30,11 @@ const Planets = (props) => {
     actions: [
       {
         label: 'Go to Films',
-        action: (row) => { console.log(`redirect to grid with ${row.films.length} Films`)}
+        route: '/films',
       },
       {
         label: 'Go to Residents',
-        action: (row) => { console.log(`redirect to grid with ${row.residents.length} Residents`)}
+        route: '/residents',
       }
     ]
   }

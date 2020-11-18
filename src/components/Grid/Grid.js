@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './Grid.css';
 
 function Grid({data: {header = [], values = [], actions = []}}) {
@@ -15,7 +16,7 @@ function Grid({data: {header = [], values = [], actions = []}}) {
             {header.map((colName) => <td key={colName}>{row[colName]}</td>)}
             {!!actions.length && 
               <td className='gridActions'>
-                {actions.map(({label, action}) => <button onClick={() => action(row)}>{label}</button>)}
+                {actions.map(({label, route}) => <Link to={`planets/${row.url.split('/')[5]}${route}`}><button>{label}</button></Link> )}
               </td>
             }
           </tr>
