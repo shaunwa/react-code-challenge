@@ -1,8 +1,6 @@
 class Api {
   static headers() {
-    return {
-      "Content-Type": "application/json",
-    };
+    return {};
   }
 
   static get(route) {

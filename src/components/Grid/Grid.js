@@ -16,7 +16,7 @@ function Grid({data: {header = [], values = [], actions = []}}) {
             {header.map((colName) => <td key={colName}>{row[colName]}</td>)}
             {!!actions.length && 
               <td className='gridActions'>
-                {actions.map(({label, route}) => <Link to={`planets/${row.url.split('/')[5]}${route}`}><button>{label}</button></Link> )}
+                {actions.map(({label, route}) => <Link to={`planets/${'1'}${route}`}><button>{label}</button></Link> )}
               </td>
             }
           </tr>

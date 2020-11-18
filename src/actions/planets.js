@@ -8,7 +8,13 @@ function setPlanets(data) {
   };
 }
 
-// POST Request For Sign Up
+function setPlanet(data) {
+  return {
+    type: types.GET_PLANET,
+    payload: data,
+  };
+}
+
 export function getPlanets() {
   return dispatch => {
     Api.get('/api/planets/').then(resp => {
@@ -19,3 +25,15 @@ export function getPlanets() {
       });
   };
 }
+
+export function getPlanet(id) {
+  return dispatch => {
+    Api.get(`/api/planets/${id}`).then(resp => {
+      dispatch(setPlanet(resp))
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+}
+

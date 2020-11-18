@@ -52,7 +52,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    values: state.planets.data && state.planets.data.results,
+    values: state.planets.list && state.planets.list.results,
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Planets);
