@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ActionCreators } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import './Film.css';
+import PropTypes from 'prop-types';
 
 const Film = (props) => {
   const [films, setFilms] = useState([]);
@@ -22,6 +22,14 @@ const Film = (props) => {
       ))}
     </div>
   );
+}
+
+Film.prototype = {
+  values: PropTypes.array
+}
+
+Film.defaultProps = {
+  values: []
 }
 
 function mapDispatchToProps(dispatch) {

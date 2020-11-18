@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ActionCreators } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 import './Planets.css';
 
 import Grid from '../Grid';
@@ -36,6 +37,11 @@ const Planets = (props) => {
         label: 'Go to Residents',
         route: '/residents',
       }
+      ,
+      {
+        label: 'Go to Planet',
+        route: '',
+      }
     ]
   }
 
@@ -44,6 +50,14 @@ const Planets = (props) => {
       <Grid data={data} />
     </div>
   );
+}
+
+Planets.prototype = {
+  values: PropTypes.array
+}
+
+Planets.defaultProps = {
+  values: []
 }
 
 function mapDispatchToProps(dispatch) {
