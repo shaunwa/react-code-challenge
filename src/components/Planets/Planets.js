@@ -17,19 +17,50 @@ const Planets = (props) => {
   }, [resData]);
 
   const data = {
-    header: [
-      'name',
-      'rotation_period',
-      'orbital_period',
-      'diameter',
-      'climate',
-      'gravity',
-      'terrain',
-      'surface_water',
-      'population',
-      'residents',
-      'films'
-    ],
+    header: [{
+      name: 'name',
+      type: 'string'
+    },
+    {
+      name: 'rotation_period',
+      type: 'number'
+    },
+    {
+      name: 'orbital_period',
+      type: 'number'
+    },
+    {
+      name: 'diameter',
+      type: 'number'
+    },
+    {
+      name: 'climate',
+      type: 'string'
+    },
+    {
+      name: 'gravity',
+      type: 'string'
+    },
+    {
+      name: 'terrain',
+      type: 'string'
+    },
+    {
+      name: 'surface_water',
+      type: 'number'
+    },
+    {
+      name: 'population',
+      type: 'number'
+    },
+    {
+      name: 'residents',
+      type: 'number'
+    },
+    {
+      name: 'films',
+      type: 'number'
+    }],
     values: props.values,
     actions: [
       {

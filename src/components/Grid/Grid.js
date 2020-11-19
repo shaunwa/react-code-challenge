@@ -6,18 +6,18 @@ function Grid({data: {header = [], values = [], actions = []}}) {
     <table className='gridTable'>
       <thead>
         <tr>
-          {header.map(colName => <th key={colName}>{colName}</th>)}
+          {header.map(column => <th key={column.name}>{column.name}</th>)}
           {!!actions.length && <th>Actions</th>}
         </tr>
       </thead>
       <tbody>
         {values.map((row, index) => (
           <tr key={index}>
-            {header.map((colName) => {
-              if(colName=='films' || colName=='residents') {
-                return <td key={colName}>{row[colName].length}</td>
+            {header.map((column) => {
+              if(column.name === 'films' || column.name === 'residents') {
+                return <td key={column.name} style={column.type === 'number' ? {textAlign: 'right'} : {}}>{row[column.name].length}</td>
               }
-              return <td key={colName}>{row[colName]}</td>
+              return <td key={column.name} style={column.type === 'number' ? {textAlign: 'right'} : {}}>{row[column.name]}</td>
             })}
             {!!actions.length &&
               <td className='gridActions'>
