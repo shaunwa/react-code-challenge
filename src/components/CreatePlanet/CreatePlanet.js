@@ -17,21 +17,17 @@ const initalState = () => ({
 
 function CreatePlanet() {
   const [planet, setPlanet] = useState(initalState);
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  };
-
-  function closeModal() {
-    setIsOpen(false);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setPlanet(initalState);
     toast.success("Successfully submitted");
-    closeModal();
+    toggleModal();
   };
 
   const handleChange = (e) => {
@@ -45,9 +41,8 @@ function CreatePlanet() {
   return (
     <div>
       <AppModal
-        modalIsOpen={modalIsOpen}
-        openModal={openModal}
-        closeModal={closeModal}
+        isOpen={isOpen}
+        toggleModal={toggleModal}
         modalButton="Create Planet"
         closeButton="X">
         <Form handleChange={handleChange} handleSubmit={handleSubmit} object={planet} />

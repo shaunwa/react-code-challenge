@@ -5,7 +5,7 @@ const Form = (props) => {
 
   return (
     <div>
-      <form style={{ width: '100%' }} onSubmit={props.handleSubmit}>
+      <form onSubmit={props.handleSubmit}>
         {
           Object.keys(props.object).map(fieldName => {
             return (<div>

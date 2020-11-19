@@ -1,18 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-import 'react-toastify/dist/ReactToastify.css';
+import './AppModal.css'
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
 
 Modal.setAppElement('body');
 
@@ -20,14 +10,14 @@ Modal.setAppElement('body');
 const AppModal = (props) => {
   return (
     <div>
-      <button onClick={props.openModal}>{props.modalButton}</button>
+      <button onClick={props.toggleModal}>{props.modalButton}</button>
       <Modal
-        isOpen={props.modalIsOpen}
-        onRequestClose={props.closeModal}
-        style={customStyles}
+        isOpen={props.isOpen}
+        onRequestClose={props.toggleModal}
+        contentClassName="app-modal"
         contentLabel="Create Planet"
       >
-        <button onClick={props.closeModal}>{props.closeButton}</button>
+        <button onClick={props.toggleModal}>{props.closeButton}</button>
         {props.children}
       </Modal>
     </div>
@@ -37,9 +27,8 @@ const AppModal = (props) => {
 
 
 AppModal.prototype = {
-  modalIsOpen: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func.isRequired,
-  openModal: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
   modalButton: PropTypes.string.isRequired,
   closeButton: PropTypes.string
 }

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store/configureStore';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './routes';
