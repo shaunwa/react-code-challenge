@@ -1,0 +1,68 @@
+.add_planet {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 24px;
+  border-radius: 12px;;
+  background-color: gray;
+}
+.add_planet--hidden {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 24px;
+  border-radius: 12px;;
+  background-color: gray;
+}
+
+.add_planet__input-wrapper {
+  padding: 5px 0 5px 5px;
+}
+
+.add_planet__input {
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 5px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: none;
+  width: 300px;
+  height: 36px;
+  outline: none;
+}
+
+.add_planet__input-wrapper:focus-within {
+  border-color: #1890ff;
+} 
+
+.add_planet__input-instructions {
+  margin-bottom: 10px;
+  font-size: 0.5em;
+}
+
+.add_planet__input-instructions--error {
+  margin-bottom: 10px;
+  font-size: 0.5em;
+  color: red;
+}
+
+.add_planet__select-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0 5px 5px;
+}
+
+.add_planet__select {
+  position: relative;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  height: 36px;
+  outline: none;
+}
