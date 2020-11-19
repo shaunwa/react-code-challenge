@@ -3,6 +3,7 @@ import { ActionCreators } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import CreatePlanet from '../CreatePlanet'
 import './Planets.css';
 
 import Grid from '../Grid';
@@ -48,6 +49,7 @@ const Planets = (props) => {
   return (
     <div className='App'>
       <Grid data={data} />
+      <CreatePlanet />
     </div>
   );
 }
