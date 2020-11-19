@@ -26,7 +26,9 @@ const Planets = (props) => {
       'gravity',
       'terrain',
       'surface_water',
-      'population'
+      'population',
+      'residents',
+      'films'
     ],
     values: props.values,
     actions: [
@@ -48,8 +50,8 @@ const Planets = (props) => {
 
   return (
     <div className='App'>
-      <Grid data={data} />
       <CreatePlanet />
+      <Grid data={data} />
     </div>
   );
 }
