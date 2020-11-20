@@ -12,7 +12,7 @@ function Grid({data: {header = [], values = [], actions = []}}) {
       <tbody>
         {values.map((row, index) => (
           <tr key={index}>
-            {header.map((colName) => <td key={colName}>{row[colName]}</td>)}
+            {header.map((colName) => <td key={colName}>{Array.isArray(row[colName])? row[colName].length : row[colName] }</td>)}
             {!!actions.length && 
               <td className='gridActions'>
                 {actions.map(({label, action}) => <button onClick={() => action(row)}>{label}</button>)}
