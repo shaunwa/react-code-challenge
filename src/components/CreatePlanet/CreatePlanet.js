@@ -45,7 +45,7 @@ function CreatePlanet() {
         toggleModal={toggleModal}
         modalButton="Create Planet"
         closeButton="X">
-        <Form handleChange={handleChange} handleSubmit={handleSubmit} object={planet} />
+        <Form handleChange={handleChange} handleSubmit={handleSubmit} data={planet} />
       </AppModal>
     </div>
   );

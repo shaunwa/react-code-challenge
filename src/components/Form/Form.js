@@ -7,10 +7,10 @@ const Form = (props) => {
     <div>
       <form onSubmit={props.handleSubmit}>
         {
-          Object.keys(props.object).map(fieldName => {
+          Object.keys(props.data).map(fieldName => {
             return (<div>
               <label htmlFor={fieldName}>{fieldName}</label>
-              <input type="text" id={fieldName} name={fieldName} value={props.object[fieldName]} onChange={props.handleChange} required /><br />
+              <input type="text" id={fieldName} name={fieldName} value={props.data[fieldName]} onChange={props.handleChange} required /><br />
             </div>)
           })
         }
@@ -23,7 +23,7 @@ const Form = (props) => {
 Form.prototype = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
-  object: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
   submitButton: PropTypes.string,
 }
 
