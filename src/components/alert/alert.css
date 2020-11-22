@@ -1,0 +1,19 @@
+.alert-container-success{
+    position: absolute;
+    border: 1px solid black;
+    right: 10px;
+    height: 50px;
+    width: 500px;
+    background: green;
+}
+.alert-container-error{
+    position: absolute;
+    border: 1px solid black;
+    right: 10px;
+    height: 50px;
+    width: 500px;
+    background: red;
+}
+.color-white{
+    color: white 
+}

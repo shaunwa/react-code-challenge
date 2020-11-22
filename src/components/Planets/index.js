@@ -1,3 +1,3 @@
-import Component from './Planets';
+// import Component from './Planets';
 
-export default Component;
+// export default Component;
