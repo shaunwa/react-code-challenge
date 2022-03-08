@@ -1,3 +1,77 @@
 .App {
   text-align: center;
+  background-color :red;
+  height : 600px;
+  width : 800px;
+  text-align : center;
+  position : relative;
+  
+  margin:auto;
+  margin-top : 30px;
+
+
+}
+
+.cover{
+  display : flex;
+  flex-direction:column;
+  justify-content : center;
+  align-items : center;
+  margin-top : 30px;
+}
+
+.score{
+  display : flex;
+  justify-content : space-between;
+  width : 100%;
+  font-size : 10px;
+
+}
+
+.canvas{
+  
+  margin:auto;
+}
+
+.paddle{
+  position : absolute;
+  background-color : black;
+  height : 90px;
+  width : 10px;
+  top : 50vh;
+
+}
+
+.paddle.left{
+  
+ 
+  left : 11vw;
+}
+
+.paddle.right{
+  
+  right : 11vw;
+}
+
+
+.score{
+  display : flex;
+  justify-content : center;
+  justify-content : space-around;
+  font-weight : bold;
+  font-size : 7vh;
+  color : black;
+
+}
+
+
+.ball{
+  position : absolute;
+  left : 50vw;
+  top : 50vh;
+  width : 2.5vh;
+  height : 2.5vh;
+  transform : translate(-50%, -50%);
+  border-radius : 50%;
+  background-color : yellow;
 }
